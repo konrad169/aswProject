@@ -1,0 +1,21 @@
+# application.yml 
+--- 
+spring: 
+  application: 
+    name: serviceC
+
+server: 
+#  port: ${PORT:${SERVER_PORT:0}}
+  port: 8084
+  
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://localhost:8761/eureka/
+      
+  instance: 
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+    metadataMap: 
+      instanceId: ${spring.application.name}:${random.value}
+
