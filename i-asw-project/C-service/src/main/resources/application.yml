@@ -4,9 +4,8 @@ spring:
   application: 
     name: serviceC
 
-server: 
-#  port: ${PORT:${SERVER_PORT:0}}
-  port: 8084
+server:
+   port: ${PORT:${SERVER_PORT:0}}
   
 eureka: 
   client: 

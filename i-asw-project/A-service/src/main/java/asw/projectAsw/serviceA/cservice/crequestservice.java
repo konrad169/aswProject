@@ -17,6 +17,6 @@ public class crequestservice implements CService {
 	private CClient cClient;
 	
 	public String getAllMessages() {
-		return cClient.getAllMessages("serviceC"); 
+		return cClient.getAllMessages(); 
 }
 }

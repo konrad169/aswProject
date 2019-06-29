@@ -6,9 +6,8 @@ spring:
     
 
 
-server: 
-#  port: ${PORT:${SERVER_PORT:0}}
-  port: 8181
+server:
+   port: ${PORT:${SERVER_PORT:0}}
 
 
 

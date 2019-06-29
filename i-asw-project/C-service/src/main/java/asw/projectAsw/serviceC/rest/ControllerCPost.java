@@ -5,7 +5,6 @@ import asw.projectAsw.api.rest.*;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import asw.projectAsw.serviceC.domain.ServiceC;
 import asw.projectAsw.serviceC.domain.ServiceCFilter;
 import asw.projectAsw.serviceC.domain.ServiceStringCollector;
 

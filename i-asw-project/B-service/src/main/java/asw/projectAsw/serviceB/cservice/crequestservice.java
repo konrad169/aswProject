@@ -4,9 +4,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
-import java.util.logging.Logger; 
+import java.util.logging.Logger;
 
+import asw.projectAsw.api.rest.CreateSingleMessageRequest;
 import asw.projectAsw.serviceB.domain.CService;
+
+
+import asw.projectAsw.api.rest.CreateSingleMessageRequest;
 
 @Service
 public class crequestservice implements CService {
@@ -17,6 +21,6 @@ public class crequestservice implements CService {
 	private CClient cClient;
 	
 	public String postMessage(String message) {
-		return cClient.postMessage("serviceC", message); 
-}
+		return cClient.postMessage(new CreateSingleMessageRequest(message)); 
+	}
 }

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServiceBFilter {
 
-	@Value("${istanceName}") 
-	private String istanceName;
+	@Value("${instanceName}") 
+	private String instanceName;
 
 	public String prependINameString(String resouceString) {
-		String finalString = istanceName + ":" + resouceString;		
+		String finalString = instanceName + ":" + resouceString;		
 		return finalString;
 	}
 }

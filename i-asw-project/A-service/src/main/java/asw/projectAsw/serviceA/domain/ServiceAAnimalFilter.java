@@ -9,12 +9,12 @@ public class ServiceAAnimalFilter {
 	@Value("${animalsName}") 
 	private String animalName;
 	
-	@Value("${istanceName}") 
-	private String istanceName;
+	@Value("${instanceName}") 
+	private String instanceName;
 	
 	
 	public String prependINameStringWithAnimal() {
-		return istanceName + ":" + getRandomAnimalName();
+		return instanceName + ":" + getRandomAnimalName();
 	}
 	
 	private String getRandomAnimalName() {

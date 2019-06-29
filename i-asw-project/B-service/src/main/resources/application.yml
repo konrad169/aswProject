@@ -4,14 +4,25 @@ spring:
   application: 
     name: serviceB
     
-    
 
 
-server: 
-#  port: ${PORT:${SERVER_PORT:0}}
-  port: 8088
+server:
+  port: 0
 
-word: 
-  subject.uri: http://localhost:8081 
-  verb.uri: http://localhost:8082 
-  object.uri: http://localhost:8083 
+
+
+
+
+  
+
+  
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://localhost:8761/eureka/
+      
+  instance: 
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+    metadataMap: 
+      instanceId: ${spring.application.name}:${random.value}
