@@ -28,15 +28,15 @@ Per l'ambiente di Ambiente di Deployment
 ## Configurazione di Kafka richiesta
 E' necessario che il servizio kafka sia in esecuzione e che sul messageBroker sia presente il topic asw.kafka.channel.alpha composta da 4 partizioni e 1 replica.
 
-Se tale topic non e' presente recarsi nella home di kafka ed eseguire
+Se tale topic non e' presente recarsi nella home di kafka ed eseguire  
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4 --topic asw.kafka.channel.alpha
 
 ## Organizzazione del repository 
 
-Questo repository Ë organizzato in diverse sezioni (cartelle): 
+Questo repository √® organizzato in diverse sezioni (cartelle): 
 * [A-service](A-service/) contiene il codice del *servizio A*, 
   che effettua due operazioni REST, GET, invocando tramite feign il servizio getAllMessage() del Servizio C;
-  POST invia un messaggio al servizio B che si occuperà di gestirlo.
+  POST invia un messaggio al servizio B che si occuperÀÜ di gestirlo.
 * [B-service](B-service/) contiene il codice del *servizio B* che riceve una chiamata POST dal servizio A, effettua un'operazione sul messaggio e invocando tramite feign il postMessage() del Servizio C invia il messaggio. 
 * [C-service](C-service/) contiene il codice del *servizio C* che riceve sia chiamate POST da B,  memorizzandolle in una lista, che chiamate GET da A, restituendo la collezione.
 * [asw-service-api-rest](asw-service-api-rest/) Contiene le API REST ed il codice per creare un Message request.
@@ -45,16 +45,16 @@ Questo repository Ë organizzato in diverse sezioni (cartelle):
 
 ## Come eseguire la build e avviare l'applicazione (Multiple-Istance). 
 
-1) Posizionarsi nella cartella [root](/)
+1) Posizionarsi nella cartella [root](.)
 2) Effettuare la build automatica di gradle tramite lo script ./build-all.sh oppure per ogni cartella presente nel repository, posizionarsi in essa, ed effettuare la build manuale tramite il comando 'gradle build'
 3) Una volta completate tutte le build , eseguire lo script ./run-service-multiple-instances.sh presente nella directory principale della cartella ,per eseguire il progetto con i servizi in maniera replicata. 
-4) Per terminare l'applicazione sar· necessario eseguire lo script ./stop-java-process.sh. 
+4) Per terminare l'applicazione sar√° necessario eseguire lo script ./stop-java-process.sh. 
 
 ## Come eseguire la build e avviare l'applicazione (Single-Istance)
-1) Posizionarsi nella cartella [root](/)
+1) Posizionarsi nella cartella [root](.)
 2) Effettuare la build automatica di gradle tramite lo script ./build-all.sh oppure per ogni cartella presente nel repository, posizionarsi in essa, ed effettuare la build manuale tramite il comando 'gradle build'
 3) Una volta completate tutte le build , eseguire lo script ./run-service-single-instance.sh presente nella directory principale della cartella ,per eseguire il progetto con i servizi in maniera non replicata. 
-4) Per terminare l'applicazione sar· necessario eseguire lo script ./stop-java-process.sh. 
+4) Per terminare l'applicazione sar√° necessario eseguire lo script ./stop-java-process.sh. 
 
 
 ## Esposizione dei servizi sulle porte
@@ -63,7 +63,7 @@ L'assegnazione delle porte dei servizi serviceA, serviceB, serviceC avviene in m
 Il servizio di ServiceDiscovery Eureka e' incaricato di acquisire gli indirizzi dei servizi in esecuzione.
 
 * Nota:  
-A seguito di un bug rilevato sulla versione di org.springframework.cloud:spring-cloud-starter-netflix-eureka-client che entra in conflitto con l'attribuzione randomica della porta ad un servizio in cui È abilitato il ServiceDiscoveryClient,
+A seguito di un bug rilevato sulla versione di org.springframework.cloud:spring-cloud-starter-netflix-eureka-client che entra in conflitto con l'attribuzione randomica della porta ad un servizio in cui √© abilitato il ServiceDiscoveryClient,
 nello script di avvio viene sovrascritta la porta di esecuzione come segue:
 
 Gli script "run-service-multiple-istance/single-istance" assegnano alle varie istanze A, B ,C delle porte prefissate per ovviare il problema: 
