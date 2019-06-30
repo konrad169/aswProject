@@ -5,10 +5,10 @@ di [Architettura dei Sistemi Software](http://cabibbo.dia.uniroma3.it/asw/)
 a Roma Tre, 
 edizione 2019 (A.A. 2018-2019), 
 tenuto dal prof. [Luca Cabibbo](http://cabibbo.dia.uniroma3.it/)
-Realizzato dagli studenti :
-Conti Ludovico
-Costa Danilo
-Silvestri Corrado. 
+Realizzato dagli studenti :  
+* Conti Ludovico
+* Costa Danilo
+* Silvestri Corrado. 
 
 Questo repository contiene il codice per la realizzazione di una semplice applicazione distribuita composta da una terna di servizi replicati che comunicano tra loro tramite invocazioni remote con REST, utilizzando Eureka per il service discovery,Kafka per lo streaming dei messaggi(message broker) Feign e Ribbon rispettivamente per effettuare chiamate rest e load balancing delle richieste e Zuul come API Gateway.Il progetto fa riferimento al caso 2 del [progetto](http://cabibbo.dia.uniroma3.it/asw/progetti/asw-progetto.pdf) pubblicato dal prof. Luca Cabibbo
 
@@ -29,7 +29,9 @@ Per l'ambiente di Ambiente di Deployment
 E' necessario che il servizio kafka sia in esecuzione e che sul messageBroker sia presente il topic asw.kafka.channel.alpha composta da 4 partizioni e 1 replica.
 
 Se tale topic non e' presente recarsi nella home di kafka ed eseguire  
+```
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4 --topic asw.kafka.channel.alpha
+```
 
 ## Organizzazione del repository 
 
