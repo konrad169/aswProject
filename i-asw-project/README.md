@@ -45,13 +45,13 @@ Questo repository è organizzato in diverse sezioni (cartelle):
 
 ## Come eseguire la build e avviare l'applicazione (Multiple-Istance). 
 
-1) Posizionarsi nella cartella [root](i-asw-project/)
+1) Posizionarsi nella cartella [root](/)
 2) Effettuare la build automatica di gradle tramite lo script ./build-all.sh oppure per ogni cartella presente nel repository, posizionarsi in essa, ed effettuare la build manuale tramite il comando 'gradle build'
 3) Una volta completate tutte le build , eseguire lo script ./run-service-multiple-instances.sh presente nella directory principale della cartella ,per eseguire il progetto con i servizi in maniera replicata. 
 4) Per terminare l'applicazione sará necessario eseguire lo script ./stop-java-process.sh. 
 
 ## Come eseguire la build e avviare l'applicazione (Single-Istance)
-1) Posizionarsi nella cartella [root](i-asw-project/)
+1) Posizionarsi nella cartella [root](/)
 2) Effettuare la build automatica di gradle tramite lo script ./build-all.sh oppure per ogni cartella presente nel repository, posizionarsi in essa, ed effettuare la build manuale tramite il comando 'gradle build'
 3) Una volta completate tutte le build , eseguire lo script ./run-service-single-instance.sh presente nella directory principale della cartella ,per eseguire il progetto con i servizi in maniera non replicata. 
 4) Per terminare l'applicazione sará necessario eseguire lo script ./stop-java-process.sh. 
@@ -62,17 +62,17 @@ Il servizio zull e' esposto sulla porta 8080 ed e' incaricato di inoltrare le ri
 L'assegnazione delle porte dei servizi serviceA, serviceB, serviceC avviene in maniera casuale.
 Il servizio di ServiceDiscovery Eureka e' incaricato di acquisire gli indirizzi dei servizi in esecuzione.
 
-Nota: 
+*Nota:  
 A seguito di un bug rilevato sulla versione di org.springframework.cloud:spring-cloud-starter-netflix-eureka-client che entra in conflitto con l'attribuzione randomica della porta ad un servizio in cui é abilitato il ServiceDiscoveryClient,
 nello script di avvio viene sovrascritta la porta di esecuzione come segue:
 
 Gli script "run-service-multiple-istance/single-istance" assegnano alle varie istanze A, B ,C delle porte prefissate per ovviare il problema: 
-Single istance:
-A:8290
-B:8090
-C:8190
+*Single istance:  
+A:8290  
+B:8090  
+C:8190  
 
-Multiple istance:
-A:8290,8291,8393
-B:8090,8091,8092
-C:8190,8191
+*Multiple istance:  
+A:8290,8291,8393  
+B:8090,8091,8092  
+C:8190,8191  
