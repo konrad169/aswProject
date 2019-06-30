@@ -53,7 +53,7 @@ Questo repository è organizzato in diverse sezioni (cartelle):
 ## Come eseguire la build e avviare l'applicazione (Single-Istance)
 1) Posizionarsi nella cartella [root](i-asw-project/)
 2) Effettuare la build automatica di gradle tramite lo script ./build-all.sh oppure per ogni cartella presente nel repository, posizionarsi in essa, ed effettuare la build manuale tramite il comando 'gradle build'
-3) Una volta completate tutte le build , eseguire lo script ./run-service-single-instances.sh presente nella directory principale della cartella ,per eseguire il progetto con i servizi in maniera non replicata. 
+3) Una volta completate tutte le build , eseguire lo script ./run-service-single-instance.sh presente nella directory principale della cartella ,per eseguire il progetto con i servizi in maniera non replicata. 
 4) Per terminare l'applicazione sará necessario eseguire lo script ./stop-java-process.sh. 
 
 
