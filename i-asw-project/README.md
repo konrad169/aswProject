@@ -13,7 +13,7 @@ Realizzato dagli studenti :
 Questo repository contiene il codice per la realizzazione di una semplice applicazione distribuita composta da una terna di servizi replicati che comunicano tra loro tramite invocazioni remote con REST, utilizzando Eureka per il service discovery,Kafka per lo streaming dei messaggi(message broker) Feign e Ribbon rispettivamente per effettuare chiamate rest e load balancing delle richieste e Zuul come API Gateway.Il progetto fa riferimento al caso 2 del [progetto](http://cabibbo.dia.uniroma3.it/asw/progetti/asw-progetto.pdf) pubblicato dal prof. Luca Cabibbo
 
 ## Software da installare sul proprio PC 
-Per l'ambiente Amiente di Sviluppo:
+Per l'ambiente Ambiente di Sviluppo:
 * [Java SDK](http://www.oracle.com/technetwork/java/javase/) 
 * [Git](https://git-scm.com/) 
 * [Gradle](http://gradle.org/) 
