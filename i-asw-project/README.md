@@ -38,9 +38,9 @@ bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-fac
 Questo repository è organizzato in diverse sezioni (cartelle): 
 * [A-service](A-service/) contiene il codice del *servizio A*, 
   che effettua due operazioni REST, GET, invocando tramite feign il servizio getAllMessage() del Servizio C;
-  POST invia un messaggio al servizio B che si occuperˆ di gestirlo.
+  POST invia un messaggio al servizio B che si occuperá di gestirlo.
 * [B-service](B-service/) contiene il codice del *servizio B* che riceve una chiamata POST dal servizio A, effettua un'operazione sul messaggio e invocando tramite feign il postMessage() del Servizio C invia il messaggio. 
-* [C-service](C-service/) contiene il codice del *servizio C* che riceve sia chiamate POST da B,  memorizzandolle in una lista, che chiamate GET da A, restituendo la collezione.
+* [C-service](C-service/) contiene il codice del *servizio C* che riceve sia chiamate POST da B,  memorizzandole in una lista, che chiamate GET da A, restituendo la collezione.
 * [asw-service-api-rest](asw-service-api-rest/) Contiene le API REST ed il codice per creare un Message request.
 * [eureka-server](eureka-server/) contiene il codice necessario per un server Eureka
 * [zuul-gateway](zuul-gateway/) contiene il codice necessario per Zuul 
@@ -68,7 +68,7 @@ Il servizio di ServiceDiscovery Eureka e' incaricato di acquisire gli indirizzi 
 A seguito di un bug rilevato sulla versione di org.springframework.cloud:spring-cloud-starter-netflix-eureka-client che entra in conflitto con l'attribuzione randomica della porta ad un servizio in cui é abilitato il ServiceDiscoveryClient,
 nello script di avvio viene sovrascritta la porta di esecuzione come segue:
 
-Gli script "run-service-multiple-istance/single-istance" assegnano alle varie istanze A, B ,C delle porte prefissate per ovviare il problema: 
+Gli script "run-service-multiple-istance/single-istance" assegnano alle varie istanze A, B ,C delle porte prefissate per ovviare al problema: 
 * Single istance:  
 A:8290  
 B:8090  
